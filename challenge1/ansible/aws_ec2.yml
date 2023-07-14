@@ -1,0 +1,11 @@
+---
+plugin: amazon.aws.aws_ec2
+regions:
+  - ap-south-1
+filters:
+  instance-state-name: running
+compose:
+  ansible_host: public_ip_address
+keyed_groups:
+  - separator: ""
+    key: tags["ans_group"]

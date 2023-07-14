@@ -1,0 +1,9 @@
+- name: Configure App Playbook
+  hosts: app
+  tasks:
+    - name: setup user
+      include_role:
+        name: user
+      vars:
+        user: app_user
+        group: app_users

@@ -1,0 +1,13 @@
+- name: Configure Web Playbook
+  hosts: web
+  tasks:
+    - name: setup user
+      include_role:
+        name: user
+      vars:
+        user: web_user
+        group: web_users
+
+    - name: setup apache2
+      include_role:
+        name: apache2

@@ -1,0 +1,5 @@
+challenge1/terraform/*.plan
+challenge1/terraform/.terraform/
+challenge1/terraform/*.hcl
+challenge1/terraform/terraform.tfstate
+challenge1/terraform/terraform.tfstate.backup

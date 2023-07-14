@@ -1,0 +1,15 @@
+- name: Create user group
+  become: yes
+  group:
+    name: "{{ group }}"
+    state: present
+
+- name: Add sudoers users to wheel group
+  become: yes
+  user:
+    name: "{{ user }}"
+    groups: 
+      - "{{ group }}"
+    append: yes
+    state: present
+    create_home: yes

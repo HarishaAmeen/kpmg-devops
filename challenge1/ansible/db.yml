@@ -1,0 +1,13 @@
+- name: Configure DB Playbook
+  hosts: db
+  tasks:
+    - name: setup user
+      include_role:
+        name: user
+      vars:
+        user: db_user
+        group: db_users
+
+    - name: setup sqllite3
+      include_role:
+        name: sqllite3
