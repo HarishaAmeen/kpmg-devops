@@ -29,34 +29,34 @@ instances = {
             ans_group = "web"
         }
     }
-#     app = {
-#         ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
-#         instance_type = "t3.nano"
-#         key_pair = "default-key"
-#         attach_eip = true
-#         security_groups = [
-#           "allow-ssh-all",
-#           "allow-app-traffic-all"
-#         ]
-#         tags = {
-#            ans_group = "app"
-#         }
-#     }
-#     db = {
-#         ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
-#         instance_type = "t3.nano"
-#         key_pair = "default-key"
-#         attach_eip = true
-#         security_groups = [
-#           "allow-ssh-all",
-#           "allow-app-traffic-all"
-#         ]
-#         tags = {
-#            ans_group = "db"
-#         }
-#    }
+    app = {
+        ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
+        instance_type = "t3.nano"
+        key_pair = "default-key"
+        attach_eip = true
+        security_groups = [
+          "allow-ssh-all",
+          "allow-app-traffic-all"
+        ]
+        tags = {
+           ans_group = "app"
+        }
+    }
+    db = {
+        ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
+        instance_type = "t3.nano"
+        key_pair = "default-key"
+        attach_eip = true
+        security_groups = [
+          "allow-ssh-all",
+          "allow-app-traffic-all"
+        ]
+        tags = {
+           ans_group = "db"
+        }
+   }
 }
 
 # Ansible specific vars
 ansi_user = "ubuntu"
-ansi_private_key_path = "/Users/harishaameen/.ssh/default-ec2-key.cer"
+ansi_private_key_path = "/Users/harishaameen/.ssh/id_rsa"
