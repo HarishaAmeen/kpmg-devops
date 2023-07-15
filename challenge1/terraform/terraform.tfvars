@@ -1,8 +1,8 @@
 # VPC where instance will be created
-vpc_id = "vpc-0b2cd41777dc57b59"
+vpc_id = "vpc-00a561cf18b108e4b"
 
 #Common subnet for all the instances in 3-tier
-subnet_id = "subnet-0a79bafffcbc26a26"
+subnet_id = "subnet-07873bc954f170882"
 
 #common ami name for all instances, override in instance hashmap
 # ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
@@ -18,7 +18,7 @@ instances = {
     web = {
         ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
         instance_type = "t3.nano"
-        key_pair = "default-ec2-key"
+        key_pair = "default-key"
         attach_eip = true
         security_groups = [
           "allow-http-all",
@@ -32,7 +32,7 @@ instances = {
 #     app = {
 #         ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
 #         instance_type = "t3.nano"
-#         key_pair = "default-ec2-key"
+#         key_pair = "default-key"
 #         attach_eip = true
 #         security_groups = [
 #           "allow-ssh-all",
@@ -45,7 +45,7 @@ instances = {
 #     db = {
 #         ami_name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*"
 #         instance_type = "t3.nano"
-#         key_pair = "default-ec2-key"
+#         key_pair = "default-key"
 #         attach_eip = true
 #         security_groups = [
 #           "allow-ssh-all",
