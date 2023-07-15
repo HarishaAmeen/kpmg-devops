@@ -3,3 +3,5 @@ challenge1/terraform/.terraform/
 challenge1/terraform/*.hcl
 challenge1/terraform/terraform.tfstate
 challenge1/terraform/terraform.tfstate.backup
+challenge3/script/__pycache__
+challenge3/script/.*
